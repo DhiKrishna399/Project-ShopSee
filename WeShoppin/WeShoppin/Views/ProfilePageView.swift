@@ -30,16 +30,7 @@ struct ProfilePageView: View {
     
     
     var body: some View {
-        //        @State private var showingGrid = true
-        //        var body: some View {
-        //            if showingGame {
-        //                MainGameView()
-        //            } else {
-        //                HomeScreenView()
-        //            }
-        //        }
-        
-        
+
         // MARK: Username Heading
         VStack{
             
