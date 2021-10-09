@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D597EA7270BEB43004A28C0 /* NavBarViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D597EA6270BEB43004A28C0 /* NavBarViewRouter.swift */; };
+		5D597EAA270BEE5F004A28C0 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D597EA9270BEE5F004A28C0 /* RootView.swift */; };
 		5DF5A711270102C7004BBEEA /* WeShoppinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF5A710270102C7004BBEEA /* WeShoppinApp.swift */; };
 		5DF5A715270102CA004BBEEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DF5A714270102CA004BBEEA /* Assets.xcassets */; };
 		5DF5A718270102CA004BBEEA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DF5A717270102CA004BBEEA /* Preview Assets.xcassets */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D597EA6270BEB43004A28C0 /* NavBarViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NavBarViewRouter.swift; path = WeShoppin/DataModels/NavBarViewRouter.swift; sourceTree = SOURCE_ROOT; };
+		5D597EA9270BEE5F004A28C0 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		5DF5A70D270102C7004BBEEA /* WeShoppin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeShoppin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DF5A710270102C7004BBEEA /* WeShoppinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeShoppinApp.swift; sourceTree = "<group>"; };
 		5DF5A714270102CA004BBEEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -98,6 +102,7 @@
 				5DF5A727270103ED004BBEEA /* LiveStreamView.swift */,
 				5DF5A730270107E0004BBEEA /* ExpandedCategoryView.swift */,
 				5DF5A73A2701096E004BBEEA /* ProfilePageView.swift */,
+				5D597EA9270BEE5F004A28C0 /* RootView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -106,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				5DF5A74827010FA4004BBEEA /* BottomNavigationBar.swift */,
+				5D597EA6270BEB43004A28C0 /* NavBarViewRouter.swift */,
 			);
 			path = CustomUIComponents;
 			sourceTree = "<group>";
@@ -196,7 +202,9 @@
 				5DF5A74927010FA4004BBEEA /* BottomNavigationBar.swift in Sources */,
 				5DF5A711270102C7004BBEEA /* WeShoppinApp.swift in Sources */,
 				5DF5A72B2701054B004BBEEA /* CreateAccountView.swift in Sources */,
+				5D597EA7270BEB43004A28C0 /* NavBarViewRouter.swift in Sources */,
 				5DF5A741270109B1004BBEEA /* ProfileHelper.swift in Sources */,
+				5D597EAA270BEE5F004A28C0 /* RootView.swift in Sources */,
 				5DF5A731270107E0004BBEEA /* ExpandedCategoryView.swift in Sources */,
 				5DF5A73B2701096E004BBEEA /* ProfilePageView.swift in Sources */,
 				5DF5A73E270109AA004BBEEA /* ProfileViewRouter.swift in Sources */,

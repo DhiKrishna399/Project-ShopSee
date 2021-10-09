@@ -17,13 +17,12 @@ struct LiveStreamView: View {
     var body: some View {
         VideoPlayer(player: player)
             .frame(width: .infinity, height: .infinity)
-                .overlay(VideoOverlay())
+            .overlay(VideoOverlay())
             .onAppear() {
                 player = AVPlayer(url: URL(string: videoUrl)!)
             }
             .navigationBarHidden(true)
             .ignoresSafeArea(.keyboard, edges: .bottom)
-
     }
 }
 
@@ -43,7 +42,7 @@ struct VideoOverlay: View {
         }
         .padding(.horizontal)
         .padding(.top)
-
+        
     }
 }
 
@@ -71,7 +70,7 @@ struct ChatBox: View {
                     LazyVGrid(columns: commentColumn, spacing: 20) {
                         
                         ForEach(sampleComments, id: \.self) {comment in
-                           CommentText(comment: comment)
+                            CommentText(comment: comment)
                             
                         }
                     }
@@ -84,7 +83,7 @@ struct ChatBox: View {
             }
             
         }
-   
+        
     }
 }
 
@@ -119,9 +118,9 @@ struct TopInfoBar: View {
             Image("avatar")
                 .resizable()
                 .scaledToFit()
-                .frame(width: 100, height: 100, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                .frame(width: 100, height: 100, alignment: .center)
         }
-        .frame(width: .infinity, height: 120, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+        .frame(width: .infinity, height: 120, alignment: .center)
         
     }
 }
@@ -139,14 +138,14 @@ struct productInfo: View {
             HStack{
                 Spacer()
                 Image(systemName: "arrowshape.turn.up.right.fill")
-
+                    
                     .frame(width: .infinity, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 Spacer()
                 Image(systemName: "star")
                 Spacer()
             }
         }
-
+        
     }
 }
 
@@ -156,15 +155,15 @@ struct productInfo: View {
 struct CommentText: View {
     var comment: String
     init(comment: String){
-           self.comment = comment
-       }
+        self.comment = comment
+    }
     var body: some View {
         
         HStack{
             Image("avatar")
                 .resizable()
-            .scaledToFit()
-            .frame(width: 20, height: 20, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                .scaledToFit()
+                .frame(width: 20, height: 20, alignment: .center)
             Text(comment)
                 .font(.body)
         }

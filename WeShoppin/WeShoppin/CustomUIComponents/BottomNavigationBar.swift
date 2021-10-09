@@ -14,21 +14,19 @@ struct BottomNavigationBar: View {
             Spacer()
             Image(systemName: "magnifyingglass")
             Spacer()
-            NavigationLink(
-                destination: LiveStreamView(),
-                label: {
-                    Image(systemName: "video")
-                        .foregroundColor(.black)
-                })
-            Spacer()
-            Image(systemName: "person")
-// MARK: @Kevin Insert the ProfilePageView of Doing it
 //            NavigationLink(
-//                destination: ProfilePageView(),
+//                destination: LiveStreamView(),
 //                label: {
-//                    Image(systemName: "person")
+//                    Image(systemName: "video")
 //                        .foregroundColor(.black)
 //                })
+            Spacer()
+            NavigationLink(
+                destination: ProfilePageView(viewRouter: ProfileViewRouter()),
+                label: {
+                    Image(systemName: "person")
+                        .foregroundColor(.black)
+                })
             Spacer()
             Image(systemName: "cart")
             

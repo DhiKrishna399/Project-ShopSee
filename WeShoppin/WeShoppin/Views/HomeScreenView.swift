@@ -11,6 +11,8 @@ struct HomeScreenView: View {
     
     
     @State var searchText = ""
+
+    
     var body: some View {
         
         
@@ -24,7 +26,6 @@ struct HomeScreenView: View {
             Spacer()
             ScrollView {
                 VStack{
-                    
                     VideoDisplay(image: "video.fill", category: "Live Now")
                     VideoDisplay(image: "laptopcomputer.and.iphone", category: "Technology")
                     VideoDisplay(image: "signpost.right.fill", category: "Experiences")
@@ -32,8 +33,7 @@ struct HomeScreenView: View {
                     VideoDisplay(image: "camera.fill", category: "Photography")
                 }
             }
-            
-          BottomNavigationBar()
+
         }
         .padding()
         .navigationBarHidden(true)

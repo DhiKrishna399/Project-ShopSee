@@ -35,7 +35,7 @@ struct CreateAccountView: View {
                     TextField("Phone Number", text: $phonenumber)
                         .font(Font.headline.weight(.semibold))
                     NavigationLink(
-                        destination: HomeScreenView(),
+                        destination: RootView(navbarViewRouter: NavBarViewRouter()),
                         label: {
                             Text("Login")
                                 .fontWeight(.bold)
