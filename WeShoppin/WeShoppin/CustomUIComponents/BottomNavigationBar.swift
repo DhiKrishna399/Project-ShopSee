@@ -21,14 +21,12 @@ struct BottomNavigationBar: View {
                         .foregroundColor(.black)
                 })
             Spacer()
-            Image(systemName: "person")
-// MARK: @Kevin Insert the ProfilePageView of Doing it
-//            NavigationLink(
-//                destination: ProfilePageView(),
-//                label: {
-//                    Image(systemName: "person")
-//                        .foregroundColor(.black)
-//                })
+            NavigationLink(
+                destination: ProfilePageView(viewRouter: ProfileViewRouter()),
+                label: {
+                    Image(systemName: "person")
+                        .foregroundColor(.black)
+                })
             Spacer()
             Image(systemName: "cart")
             
