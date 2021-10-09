@@ -28,6 +28,13 @@ struct BottomNavigationBar: View {
                         .foregroundColor(.black)
                 })
             Spacer()
+            NavigationLink(
+                destination: ProfilePageView(viewRouter: ProfileViewRouter()),
+                label: {
+                    Image(systemName: "person")
+                        .foregroundColor(.black)
+                })
+            Spacer()
             Image(systemName: "cart")
             
         }

@@ -10,7 +10,6 @@ import SwiftUI
 struct LoginView: View {
     //This is used to prevent the navbar from overlaying onto all the child views
     @State private var navBarIsHidden = true
-  
     @State private var email: String = ""
     @State private var password: String = ""
     
@@ -34,7 +33,7 @@ struct LoginView: View {
                         .frame(height: 20)
                     
                     NavigationLink(
-                        destination: HomeScreenView(),
+                        destination: RootView(navbarViewRouter: NavBarViewRouter()),
                         label: {
                             Text("Login")
                                 .fontWeight(.bold)

@@ -32,20 +32,6 @@ struct ExpandedCategoryView: View {
                     }
                 }
             }
-            HStack {
-                Image(systemName: "house")
-                Spacer()
-                Image(systemName: "magnifyingglass")
-                Spacer()
-                Image(systemName: "video")
-                Spacer()
-                Image(systemName: "person")
-                Spacer()
-                Image(systemName: "cart")
-                
-            }
-            .font(.system(size: 30))
-            .frame(maxWidth: .infinity)
         }
         .padding(.horizontal)
         .navigationBarHidden(true)

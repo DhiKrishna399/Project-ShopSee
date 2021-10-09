@@ -126,28 +126,6 @@ struct ProfilePageView: View {
                     
                 }
             }
-            //gridButton(imageNames: images)
-            
-            HStack {
-                NavigationLink(
-                    destination: HomeScreenView(),
-                    label: {
-                        Image(systemName: "house")
-                            .foregroundColor(.black)
-                    })
-                Spacer()
-                Image(systemName: "magnifyingglass")
-                Spacer()
-                Image(systemName: "video")
-                Spacer()
-                Image(systemName: "person")
-                
-                Spacer()
-                Image(systemName: "cart")
-                
-            }
-            .font(.system(size: 30))
-            .frame(maxWidth: .infinity)
         }
         
     }
