@@ -19,19 +19,19 @@ struct ProfilePageView: View {
     
     var images: [String] = ["gondola", "hotel0", "hotel1", "hotel2", "murano", "newdelhi", "newyork", "paris", "santorini", "saopaulo", "stmarksbasilica", "venice"]
     
+    //Ordered collection of key-value pairs and don’t require the fast key lookup that the Dictionary type provides.
+    var imageCommentDict: [String : String] = ["This lipstick tastes like chocolate" : "gondola",
+                                               "I Love this product - just bought 2 more" : "hotel0",
+                                               "OMG I just saw Brad with Vicky" : "hotel1",
+                                               "This coffee is amazing 10/10" : "hotel2",
+                                               "It's 2:00am........I should probably go to bed :(" : "murano",
+                                               "FUCKING BRAD IS SUCH A BITCH!!!!" : "newdelhi",
+                                               "Who tf even is Brad??!" : "newyork"]
+    
     
     var body: some View {
-//        @State private var showingGrid = true
-//        var body: some View {
-//            if showingGame {
-//                MainGameView()
-//            } else {
-//                HomeScreenView()
-//            }
-//        }
-        
 
-
+        // MARK: Username Heading
         VStack{
             
             HStack {
@@ -48,80 +48,83 @@ struct ProfilePageView: View {
             }.padding(.horizontal)
             
             // Profile Image and background
-            ZStack {
-                Rectangle().foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/).frame(width: .infinity, height: 120)
-                Circle().foregroundColor(.white).frame(width: 100, height: 100, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-            }
-            
-            HStack{
-                Text("7k \nFollowers").multilineTextAlignment(.center)
-                Spacer()
-                Text("28 \nFollowing").multilineTextAlignment(.center)
-                Spacer()
-                Text("12 \nPosts").multilineTextAlignment(.center)
-                
-            }.padding(.horizontal)
-            HStack{
-                Spacer()
-                
-                Button(action: {
-                    viewRouter.currentPage = .gridButton
-                }) {
-                    Image(systemName: "square.grid.2x2")
-                }
-//                Spacer()
-//                Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
-//                    Image(systemName: "message")
-//                }
-                Spacer()
-                Button(action: {
-                    viewRouter.currentPage = .commentButton
-                
-                }) {
-                    Image(systemName: "square.stack.3d.up.fill")
+            ScrollView(.vertical){
+                ZStack {
+                    Rectangle().foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/).frame(width: .infinity, height: 120)
+                    Circle().foregroundColor(.white).frame(width: 100, height: 100, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 }
                 
-//                Button(action: {
-//                    // What to perform
-//                }) {
-//                    // How the button looks like
-//                }
-                Spacer()
-            }.font(.system(size: 25))
-            
-//            ScrollView(.vertical){
-//                LazyVGrid(columns: videoCols, spacing: 20) {
-//
-//                    ForEach(images, id: \.self) {image in
-//                        ImageViewProfile(imageName: image)
-//
-//                    }
-//
-//                }
-//                .padding(.horizontal)
-//            }
-            
-//            ScrollView(.vertical){
-//                LazyVGrid(columns: CommentCols, spacing: 20) {
-//
-////                    for i in 0..<comments.count {
-////                        CommentViewProfile(commentName: comments[i], imagesComments[i])
-////                    }
-//
-//                    ForEach(comments, id: \.self) {comment in
-//                        CommentViewProfile(commentName: comment)
-//
-//                    }
-//                }
-//                .padding(.horizontal)
-//            }
-
-            switch viewRouter.currentPage {
-            case .gridButton:
-                gridButton(imageNames: images)
-            case .commentButton:
-                commentButton(comments: comments)
+                HStack{
+                    Text("7k \nFollowers").multilineTextAlignment(.center)
+                    Spacer()
+                    Text("28 \nFollowing").multilineTextAlignment(.center)
+                    Spacer()
+                    Text("12 \nPosts").multilineTextAlignment(.center)
+                    
+                }.padding(.horizontal)
+                // MARK: Toggle Buttons
+                HStack{
+                    Spacer()
+                    
+                    Button(action: {
+                        viewRouter.currentPage = .gridButton
+                    }) {
+                        Image(systemName: "square.grid.2x2")
+                    }
+                    //                Spacer()
+                    //                Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
+                    //                    Image(systemName: "message")
+                    //                }
+                    Spacer()
+                    Button(action: {
+                        viewRouter.currentPage = .commentButton
+                        
+                    }) {
+                        Image(systemName: "square.stack.3d.up.fill")
+                    }
+                    
+                    //                Button(action: {
+                    //                    // What to perform
+                    //                }) {
+                    //                    // How the button looks like
+                    //                }
+                    Spacer()
+                }.font(.system(size: 25))
                 
+                //            ScrollView(.vertical){
+                //                LazyVGrid(columns: videoCols, spacing: 20) {
+                //
+                //                    ForEach(images, id: \.self) {image in
+                //                        ImageViewProfile(imageName: image)
+                //
+                //                    }
+                //
+                //                }
+                //                .padding(.horizontal)
+                //            }
+                
+                //            ScrollView(.vertical){
+                //                LazyVGrid(columns: CommentCols, spacing: 20) {
+                //
+                ////                    for i in 0..<comments.count {
+                ////                        CommentViewProfile(commentName: comments[i], imagesComments[i])
+                ////                    }
+                //
+                //                    ForEach(comments, id: \.self) {comment in
+                //                        CommentViewProfile(commentName: comment)
+                //
+                //                    }
+                //                }
+                //                .padding(.horizontal)
+                //            }
+                
+                switch viewRouter.currentPage {
+                case .gridButton:
+                    gridButton(imageNames: images)
+                case .commentButton:
+                    commentButton(imageComments: imageCommentDict)
+                    
+                }
             }
             //gridButton(imageNames: images)
             
@@ -150,6 +153,7 @@ struct ProfilePageView: View {
     }
 }
 
+// MARK: Hamburger Menu
 struct HamburgerMenuView: View {
     var body: some View {
         
@@ -179,7 +183,7 @@ struct HamburgerMenuView: View {
 //        }
 //    }
 //}
-
+// MARK: Grid Button
 struct gridButton: View {
     
     let videoCols = [GridItem(.flexible()),
@@ -195,55 +199,72 @@ struct gridButton: View {
     var body: some View {
         
         
-        ScrollView(.vertical){
-            LazyVGrid(columns: videoCols, spacing: 20) {
-
-                ForEach(imageNames, id: \.self) {image in
-                    ImageViewProfile(imageName: image)
-
-                }
-
+        //ScrollView(.vertical){
+        LazyVGrid(columns: videoCols, spacing: 20) {
+            
+            ForEach(imageNames, id: \.self) {image in
+                ImageViewProfile(imageName: image)
+                
             }
-            .padding(.horizontal)
+            
         }
+        .padding(.horizontal)
+        //}
     }
 }
 
-
+// MARK: Comment Button
 struct commentButton: View {
     
-    var comments: [String]
+    var imageComments: [String:String]
+    //    var comments: [String]
     
     let CommentCols = [GridItem(.flexible())]
     
-    init(comments: [String]){
-        self.comments = comments
+    init(imageComments: [String:String]){
+        self.imageComments = imageComments
     }
     
     var body: some View {
         
-
+        let keys = imageComments.map{$0.key}
+        let values = imageComments.map {$0.value}
         
-        ScrollView(.vertical){
         
-        LazyVGrid(columns: CommentCols, spacing: 20) {
-
-//                    for i in 0..<comments.count {
-//                        CommentViewProfile(commentName: comments[i], imagesComments[i])
-//                    }
-
-            ForEach(comments, id: \.self) {comment in
-                CommentViewProfile(commentName: comment)
-
+        //ScrollView(.vertical){
+            
+            LazyVGrid(columns: CommentCols, spacing: 20) {
+                
+                //                    for i in 0..<comments.count {
+                //                        CommentViewProfile(commentName: comments[i], imagesComments[i])
+                //                    }
+                
+                //
+                //                    for (key, value) in imageComments {
+                //                        CommentViewProfile(commentName: key, postName: value)
+                //                    }
+                //                ForEach(keys.indices, id: \.self) {key, value in
+                //                                CommentViewProfile(commentName: key, postName: value)
+                //
+                //                            }
+                
+                ForEach(keys.indices) {index in
+                    CommentViewProfile(commentName: keys[index], postName: values[index])
+                }
+                
+                
+                //            ForEach(Array(imageComments.keys), id: \.self)
+                //            imageComments.forEach { key, value in }
+                //            imageComments.forEach{CommentViewProfile(commentName: $0.key, postName: $0.value}
+                
             }
-        }
-        .padding(.horizontal)
-    }
+            .padding(.horizontal)
+        //}
     }
 }
 
 
-
+// MARK: Grid View
 struct ImageViewProfile: View {
     
     var imageName: String
@@ -272,15 +293,16 @@ struct ImageViewProfile: View {
     }
 }
 
-
+// MARK: Comment View
 struct CommentViewProfile: View {
     
     var commentName: String
-    //var postName: String
     
-    init(commentName: String){
+    var postName: String
+    
+    init(commentName: String, postName: String){
         self.commentName = commentName
-        //self.postName = postName
+        self.postName = postName
     }
     
     var body: some View {
@@ -290,10 +312,10 @@ struct CommentViewProfile: View {
                 
                 Rectangle().foregroundColor(.gray).frame(width: 375, height: 70).cornerRadius(10).overlay(
                     HStack {
-//                        Image(postName).resizable()
-//                            .aspectRatio(contentMode: .fill)
-//                            .frame(width: 80, height: 50, alignment: .center)
-//                            .cornerRadius(10)
+                        Image(postName).resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 75, height: 50, alignment: .center)
+                            .cornerRadius(10)
                         Text(commentName)
                             .font(.body)
                     }, alignment: .center)
