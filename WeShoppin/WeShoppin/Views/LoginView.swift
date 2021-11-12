@@ -12,6 +12,8 @@ struct LoginView: View {
     @State private var navBarIsHidden = true
     @State private var email: String = ""
     @State private var password: String = ""
+    @State private var showHomeScreen: Bool = false
+    @EnvironmentObject var authViewModel: AuthenticationViewModel
     
 
     var body: some View {
@@ -25,31 +27,37 @@ struct LoginView: View {
                         .frame(height: 200)
                     TextField("Email", text: $email)
                         .font(Font.headline.weight(.semibold))
+                        .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
                     Spacer()
                         .frame(height: 10)
-                    TextField("Password", text: $password)
+                    SecureField("Password", text: $password)
                         .font(Font.headline.weight(.semibold))
+                        .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
                     Spacer()
                         .frame(height: 20)
-                    
-                    NavigationLink(
-                        destination: RootView(navbarViewRouter: NavBarViewRouter()),
-                        label: {
-                            Text("Login")
-                                .fontWeight(.bold)
-                                .font(.body)
-                                .padding()
-                                .frame(width: 200,alignment: .center)
-                                .background(Color.white)
-                                .cornerRadius(40)
-                                .foregroundColor(.orange)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 40)
-                                        .stroke(Color.orange, lineWidth: 5)
-                                        .frame(width: 200,alignment: .center)
-                                )
-                            
-                        })
+                    Button(action: {
+                        guard !email.isEmpty, !password.isEmpty else { return }
+                        DispatchQueue.main.async {
+                            if (authViewModel.signIn(email: email, password: password)) {
+                                showHomeScreen = true
+                            }
+                        }
+                    }) {
+                        Text("Login")
+                            .fontWeight(.bold)
+                            .font(.body)
+                            .padding()
+                            .frame(width: 200,alignment: .center)
+                            .background(Color.white)
+                            .cornerRadius(40)
+                            .foregroundColor(.orange)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 40)
+                                    .stroke(Color.orange, lineWidth: 5)
+                                    .frame(width: 200,alignment: .center)
+                            )
+                    }
+                    NavigationLink(destination: RootView(navbarViewRouter: NavBarViewRouter()), isActive: $showHomeScreen) {}
                     Spacer()
                         .frame(height:200)
                     NavigationLink(
