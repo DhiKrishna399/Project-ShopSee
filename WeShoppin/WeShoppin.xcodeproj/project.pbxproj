@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3914D2182738796D00F6A3DB /* ContentUploadForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3914D2172738796D00F6A3DB /* ContentUploadForm.swift */; };
+		3965F6912713F69000EEF76F /* ProfileGridButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3965F6902713F69000EEF76F /* ProfileGridButton.swift */; };
+		3965F6932713F6FD00EEF76F /* ProfileCommentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3965F6922713F6FD00EEF76F /* ProfileCommentButton.swift */; };
+		3965F697271CF21700EEF76F /* ProductPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3965F696271CF21700EEF76F /* ProductPageView.swift */; };
 		5D597EA7270BEB43004A28C0 /* NavBarViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D597EA6270BEB43004A28C0 /* NavBarViewRouter.swift */; };
 		5D597EAA270BEE5F004A28C0 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D597EA9270BEE5F004A28C0 /* RootView.swift */; };
 		5DF5A711270102C7004BBEEA /* WeShoppinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF5A710270102C7004BBEEA /* WeShoppinApp.swift */; };
@@ -25,6 +29,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3914D2172738796D00F6A3DB /* ContentUploadForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentUploadForm.swift; sourceTree = "<group>"; };
+		3965F6902713F69000EEF76F /* ProfileGridButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileGridButton.swift; sourceTree = "<group>"; };
+		3965F6922713F6FD00EEF76F /* ProfileCommentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCommentButton.swift; sourceTree = "<group>"; };
+		3965F696271CF21700EEF76F /* ProductPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPageView.swift; sourceTree = "<group>"; };
 		5D597EA6270BEB43004A28C0 /* NavBarViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NavBarViewRouter.swift; path = WeShoppin/DataModels/NavBarViewRouter.swift; sourceTree = SOURCE_ROOT; };
 		5D597EA9270BEE5F004A28C0 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		5DF5A70D270102C7004BBEEA /* WeShoppin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeShoppin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,13 +104,17 @@
 		5DF5A72E27010576004BBEEA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5DF5A724270103AB004BBEEA /* HomeScreenView.swift */,
 				5DF5A72A2701054B004BBEEA /* CreateAccountView.swift */,
 				5DF5A72127010354004BBEEA /* LoginView.swift */,
-				5DF5A724270103AB004BBEEA /* HomeScreenView.swift */,
 				5DF5A727270103ED004BBEEA /* LiveStreamView.swift */,
 				5DF5A730270107E0004BBEEA /* ExpandedCategoryView.swift */,
 				5DF5A73A2701096E004BBEEA /* ProfilePageView.swift */,
+				3965F6902713F69000EEF76F /* ProfileGridButton.swift */,
+				3914D2172738796D00F6A3DB /* ContentUploadForm.swift */,
+				3965F6922713F6FD00EEF76F /* ProfileCommentButton.swift */,
 				5D597EA9270BEE5F004A28C0 /* RootView.swift */,
+				3965F696271CF21700EEF76F /* ProductPageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -197,15 +209,19 @@
 			files = (
 				5DF5A725270103AB004BBEEA /* HomeScreenView.swift in Sources */,
 				5DF5A744270109B4004BBEEA /* DataTile.swift in Sources */,
+				3914D2182738796D00F6A3DB /* ContentUploadForm.swift in Sources */,
 				5DF5A72227010354004BBEEA /* LoginView.swift in Sources */,
 				5DF5A728270103ED004BBEEA /* LiveStreamView.swift in Sources */,
 				5DF5A74927010FA4004BBEEA /* BottomNavigationBar.swift in Sources */,
+				3965F6912713F69000EEF76F /* ProfileGridButton.swift in Sources */,
 				5DF5A711270102C7004BBEEA /* WeShoppinApp.swift in Sources */,
 				5DF5A72B2701054B004BBEEA /* CreateAccountView.swift in Sources */,
 				5D597EA7270BEB43004A28C0 /* NavBarViewRouter.swift in Sources */,
+				3965F697271CF21700EEF76F /* ProductPageView.swift in Sources */,
 				5DF5A741270109B1004BBEEA /* ProfileHelper.swift in Sources */,
 				5D597EAA270BEE5F004A28C0 /* RootView.swift in Sources */,
 				5DF5A731270107E0004BBEEA /* ExpandedCategoryView.swift in Sources */,
+				3965F6932713F6FD00EEF76F /* ProfileCommentButton.swift in Sources */,
 				5DF5A73B2701096E004BBEEA /* ProfilePageView.swift in Sources */,
 				5DF5A73E270109AA004BBEEA /* ProfileViewRouter.swift in Sources */,
 			);
