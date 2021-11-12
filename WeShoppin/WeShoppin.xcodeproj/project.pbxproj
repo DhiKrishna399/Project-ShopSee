@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D015B3C272A58DB0066C2BA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D015B3B272A58DB0066C2BA /* GoogleService-Info.plist */; };
+		5D015B3F272A5A9E0066C2BA /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D015B3E272A5A9E0066C2BA /* AuthenticationViewModel.swift */; };
 		3914D2182738796D00F6A3DB /* ContentUploadForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3914D2172738796D00F6A3DB /* ContentUploadForm.swift */; };
 		3965F6912713F69000EEF76F /* ProfileGridButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3965F6902713F69000EEF76F /* ProfileGridButton.swift */; };
 		3965F6932713F6FD00EEF76F /* ProfileCommentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3965F6922713F6FD00EEF76F /* ProfileCommentButton.swift */; };
@@ -26,9 +28,14 @@
 		5DF5A741270109B1004BBEEA /* ProfileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF5A740270109B1004BBEEA /* ProfileHelper.swift */; };
 		5DF5A744270109B4004BBEEA /* DataTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF5A743270109B4004BBEEA /* DataTile.swift */; };
 		5DF5A74927010FA4004BBEEA /* BottomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF5A74827010FA4004BBEEA /* BottomNavigationBar.swift */; };
+		B15659AA3E3D77C9EFDD7045 /* Pods_WeShoppin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C6B35853A15746C80A30734 /* Pods_WeShoppin.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0FA7148C34D1535B74AFB93A /* Pods-WeShoppin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeShoppin.release.xcconfig"; path = "Target Support Files/Pods-WeShoppin/Pods-WeShoppin.release.xcconfig"; sourceTree = "<group>"; };
+		1C6B35853A15746C80A30734 /* Pods_WeShoppin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeShoppin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D015B3B272A58DB0066C2BA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5D015B3E272A5A9E0066C2BA /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		3914D2172738796D00F6A3DB /* ContentUploadForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentUploadForm.swift; sourceTree = "<group>"; };
 		3965F6902713F69000EEF76F /* ProfileGridButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileGridButton.swift; sourceTree = "<group>"; };
 		3965F6922713F6FD00EEF76F /* ProfileCommentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCommentButton.swift; sourceTree = "<group>"; };
@@ -50,6 +57,7 @@
 		5DF5A740270109B1004BBEEA /* ProfileHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHelper.swift; sourceTree = "<group>"; };
 		5DF5A743270109B4004BBEEA /* DataTile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTile.swift; sourceTree = "<group>"; };
 		5DF5A74827010FA4004BBEEA /* BottomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomNavigationBar.swift; sourceTree = "<group>"; };
+		CF071CC562864F757665D947 /* Pods-WeShoppin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeShoppin.debug.xcconfig"; path = "Target Support Files/Pods-WeShoppin/Pods-WeShoppin.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B15659AA3E3D77C9EFDD7045 /* Pods_WeShoppin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +77,8 @@
 			children = (
 				5DF5A70F270102C7004BBEEA /* WeShoppin */,
 				5DF5A70E270102C7004BBEEA /* Products */,
+				AF8E7CC5385D68CAFF1A2983 /* Pods */,
+				606D39B6EBFEC4F087E35A2D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +98,7 @@
 				5DF5A73627010855004BBEEA /* CustomUIComponents */,
 				5DF5A72E27010576004BBEEA /* Views */,
 				5DF5A714270102CA004BBEEA /* Assets.xcassets */,
+				5D015B3B272A58DB0066C2BA /* GoogleService-Info.plist */,
 				5DF5A719270102CA004BBEEA /* Info.plist */,
 				5DF5A716270102CA004BBEEA /* Preview Content */,
 			);
@@ -134,8 +146,26 @@
 				5DF5A73D270109AA004BBEEA /* ProfileViewRouter.swift */,
 				5DF5A740270109B1004BBEEA /* ProfileHelper.swift */,
 				5DF5A743270109B4004BBEEA /* DataTile.swift */,
+				5D015B3E272A5A9E0066C2BA /* AuthenticationViewModel.swift */,
 			);
 			path = DataModels;
+			sourceTree = "<group>";
+		};
+		606D39B6EBFEC4F087E35A2D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C6B35853A15746C80A30734 /* Pods_WeShoppin.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF8E7CC5385D68CAFF1A2983 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CF071CC562864F757665D947 /* Pods-WeShoppin.debug.xcconfig */,
+				0FA7148C34D1535B74AFB93A /* Pods-WeShoppin.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,9 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5DF5A71C270102CA004BBEEA /* Build configuration list for PBXNativeTarget "WeShoppin" */;
 			buildPhases = (
+				D5F7C274F76AA34013D2F0F7 /* [CP] Check Pods Manifest.lock */,
 				5DF5A709270102C7004BBEEA /* Sources */,
 				5DF5A70A270102C7004BBEEA /* Frameworks */,
 				5DF5A70B270102C7004BBEEA /* Resources */,
+				282C45A176CE2810D0074698 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -197,10 +229,53 @@
 			files = (
 				5DF5A718270102CA004BBEEA /* Preview Assets.xcassets in Resources */,
 				5DF5A715270102CA004BBEEA /* Assets.xcassets in Resources */,
+				5D015B3C272A58DB0066C2BA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		282C45A176CE2810D0074698 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WeShoppin/Pods-WeShoppin-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WeShoppin/Pods-WeShoppin-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WeShoppin/Pods-WeShoppin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5F7C274F76AA34013D2F0F7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WeShoppin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5DF5A709270102C7004BBEEA /* Sources */ = {
@@ -209,6 +284,7 @@
 			files = (
 				5DF5A725270103AB004BBEEA /* HomeScreenView.swift in Sources */,
 				5DF5A744270109B4004BBEEA /* DataTile.swift in Sources */,
+				5D015B3F272A5A9E0066C2BA /* AuthenticationViewModel.swift in Sources */,
 				3914D2182738796D00F6A3DB /* ContentUploadForm.swift in Sources */,
 				5DF5A72227010354004BBEEA /* LoginView.swift in Sources */,
 				5DF5A728270103ED004BBEEA /* LiveStreamView.swift in Sources */,
@@ -348,6 +424,7 @@
 		};
 		5DF5A71D270102CA004BBEEA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF071CC562864F757665D947 /* Pods-WeShoppin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -369,6 +446,7 @@
 		};
 		5DF5A71E270102CA004BBEEA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FA7148C34D1535B74AFB93A /* Pods-WeShoppin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -9,12 +9,12 @@ import SwiftUI
 
 struct CreateAccountView: View {
     
-  
-    
     @State private var username: String = ""
     @State private var email: String = ""
     @State private var password: String = ""
+    @State private var passwordVerify: String = ""
     @State private var phonenumber: String = ""
+    @EnvironmentObject var authViewModel: AuthenticationViewModel
     
     var body: some View {
       
@@ -26,14 +26,25 @@ struct CreateAccountView: View {
                      .font(.largeTitle)
                     TextField("Username", text: $username)
                         .font(Font.headline.weight(.semibold))
+                        .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
                     TextField("Email", text: $email)
                         .font(Font.headline.weight(.semibold))
+                        .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
                     TextField("Password", text: $password)
                         .font(Font.headline.weight(.semibold))
-                    TextField("Re-Enter Password", text: $password)
+                        .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
+                    TextField("Re-Enter Password", text: $passwordVerify)
                         .font(Font.headline.weight(.semibold))
+                        .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
                     TextField("Phone Number", text: $phonenumber)
                         .font(Font.headline.weight(.semibold))
+                        .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
+                    Button(action: {
+                        guard !email.isEmpty, !password.isEmpty else { return }
+                        if passwordVerify == password {
+                            authViewModel.createAccount(email: email, password: password)
+                        }
+                    }) {
                     NavigationLink(
                         destination: RootView(navbarViewRouter: NavBarViewRouter()),
                         label: {
@@ -50,10 +61,8 @@ struct CreateAccountView: View {
                                         .stroke(Color.orange, lineWidth: 5)
                                         .frame(width: 200,alignment: .center)
                                 )
-                            
                         })
-                    
-
+                    }
                 }
                 .textFieldStyle(OvalTextFieldStyle())
                 .padding(.all)
