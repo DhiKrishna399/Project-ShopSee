@@ -35,7 +35,7 @@ struct BottomNavigationBar: View {
                         .foregroundColor(.black)
                 })
             Spacer()
-            Image(systemName: "cart")
+            //Image(systemName: "cart")
             
         }
         .font(.system(size: 30))
